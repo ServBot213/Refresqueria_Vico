@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login2">
+
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.example.refresqueriavicogestion.ui.login.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login2_to_menuPrincipal"
+            app:destination="@id/menuPrincipal" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuPrincipal"
+        android:name="com.example.refresqueriavicogestion.MenuPrincipal"
+        android:label="fragment_menu_principal"
+        tools:layout="@layout/fragment_menu_principal" >
+        <action
+            android:id="@+id/action_menuPrincipal_to_apartadoEmpleados"
+            app:destination="@id/apartadoEmpleados" />
+        <action
+            android:id="@+id/action_menuPrincipal_to_apartadoAdmin"
+            app:destination="@id/apartadoAdmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/apartadoEmpleados"
+        android:name="com.example.refresqueriavicogestion.ApartadoEmpleados"
+        android:label="fragment_apartado_empleados"
+        tools:layout="@layout/fragment_apartado_empleados" >
+        <action
+            android:id="@+id/action_apartadoEmpleados_to_ventas"
+            app:destination="@id/ventas" />
+        <action
+            android:id="@+id/action_apartadoEmpleados_to_consultaProductos"
+            app:destination="@id/consultaProductos" />
+    </fragment>
+    <fragment
+        android:id="@+id/apartadoAdmin"
+        android:name="com.example.refresqueriavicogestion.ApartadoAdmin"
+        android:label="fragment_apartado_admin"
+        tools:layout="@layout/fragment_apartado_admin" >
+        <action
+            android:id="@+id/action_apartadoAdmin_to_gestionEmpleados"
+            app:destination="@id/gestionEmpleados" />
+        <action
+            android:id="@+id/action_apartadoAdmin_to_inventarioMatPrima"
+            app:destination="@id/inventarioMatPrima" />
+        <action
+            android:id="@+id/action_apartadoAdmin_to_inventarioProductos2"
+            app:destination="@id/inventarioProductos" />
+        <action
+            android:id="@+id/action_apartadoAdmin_to_consultaProductos"
+            app:destination="@id/consultaProductos" />
+        <action
+            android:id="@+id/action_apartadoAdmin_to_consultaMateriaPrima"
+            app:destination="@id/consultaMateriaPrima" />
+    </fragment>
+    <fragment
+        android:id="@+id/ventas"
+        android:name="com.example.refresqueriavicogestion.Ventas"
+        android:label="fragment_ventas"
+        tools:layout="@layout/fragment_ventas" />
+    <fragment
+        android:id="@+id/consultaProductos"
+        android:name="com.example.refresqueriavicogestion.ConsultaProductos"
+        android:label="fragment_consulta_productos"
+        tools:layout="@layout/fragment_consulta_productos" />
+    <fragment
+        android:id="@+id/gestionEmpleados"
+        android:name="com.example.refresqueriavicogestion.GestionEmpleados"
+        android:label="fragment_gestion_empleados"
+        tools:layout="@layout/fragment_gestion_empleados" />
+    <fragment
+        android:id="@+id/inventarioMatPrima"
+        android:name="com.example.refresqueriavicogestion.InventarioMatPrima"
+        android:label="fragment_inventario_mat_prima"
+        tools:layout="@layout/fragment_inventario_mat_prima" />
+    <fragment
+        android:id="@+id/inventarioProductos"
+        android:name="com.example.refresqueriavicogestion.InventarioProductos"
+        android:label="fragment_inventario_productos"
+        tools:layout="@layout/fragment_inventario_productos" />
+    <fragment
+        android:id="@+id/consultaMateriaPrima"
+        android:name="com.example.refresqueriavicogestion.ConsultaMateriaPrima"
+        android:label="fragment_consulta_materia_prima"
+        tools:layout="@layout/fragment_consulta_materia_prima" />
+</navigation>
