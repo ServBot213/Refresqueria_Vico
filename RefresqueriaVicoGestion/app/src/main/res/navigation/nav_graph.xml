@@ -3,17 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/login2">
+    app:startDestination="@id/inicioSesion">
 
-    <fragment
-        android:id="@+id/login2"
-        android:name="com.example.refresqueriavicogestion.ui.login.Login"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_login2_to_menuPrincipal"
-            app:destination="@id/menuPrincipal" />
-    </fragment>
     <fragment
         android:id="@+id/menuPrincipal"
         android:name="com.example.refresqueriavicogestion.MenuPrincipal"
@@ -89,4 +80,13 @@
         android:name="com.example.refresqueriavicogestion.ConsultaMateriaPrima"
         android:label="fragment_consulta_materia_prima"
         tools:layout="@layout/fragment_consulta_materia_prima" />
+    <fragment
+        android:id="@+id/inicioSesion"
+        android:name="com.example.refresqueriavicogestion.InicioSesion"
+        android:label="fragment_inicio_sesion"
+        tools:layout="@layout/fragment_inicio_sesion" >
+        <action
+            android:id="@+id/action_inicioSesion_to_menuPrincipal"
+            app:destination="@id/menuPrincipal" />
+    </fragment>
 </navigation>
