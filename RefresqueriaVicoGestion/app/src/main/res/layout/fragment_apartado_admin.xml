@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
     tools:context=".ApartadoAdmin">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresqueria Vico"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="3dp" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="218dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="28dp"
+        android:text="Empleados"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="214dp"
+        android:layout_height="129dp"
+        android:text="Productos"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="187dp"
+        android:layout_height="132dp"
+        android:text="Materia prima"
+        tools:layout_editor_absoluteX="499dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="208dp"
+        android:layout_height="35dp"
+        android:text="Cerrar sesion"
+        tools:layout_editor_absoluteY="3dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

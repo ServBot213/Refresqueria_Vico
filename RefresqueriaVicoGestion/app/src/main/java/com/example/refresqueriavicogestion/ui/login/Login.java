@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.refresqueriavicogestion.MenuPrincipal;
 import com.example.refresqueriavicogestion.databinding.FragmentLoginBinding;
 
 import com.example.refresqueriavicogestion.R;
@@ -47,8 +49,8 @@ public class Login extends Fragment {
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = binding.username;
-        final EditText passwordEditText = binding.password;
+        final EditText usernameEditText = binding.Constrasena;
+        final EditText passwordEditText = binding.Usuario;
         final Button loginButton = binding.login;
         final ProgressBar loadingProgressBar = binding.loading;
 
@@ -118,9 +120,10 @@ public class Login extends Fragment {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                Intent intent = new Intent(requireContext(), MenuPrincipal.class);
+                startActivity(intent);
+// Opcional: cerrar la actividad actual si ya no quieres que el usuario vuelva con el botón "Atrás"
+                requireActivity().finish();
             }
         });
     }

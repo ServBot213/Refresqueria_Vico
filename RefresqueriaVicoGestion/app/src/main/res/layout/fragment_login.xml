@@ -3,34 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
+    android:background="@drawable/login_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/fragment_horizontal_margin"
     android:paddingTop="@dimen/fragment_vertical_margin"
     android:paddingRight="@dimen/fragment_horizontal_margin"
     android:paddingBottom="@dimen/fragment_vertical_margin"
+    android:gravity="center"
     tools:context=".ui.login.Login">
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/Usuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/Constrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
@@ -38,8 +43,9 @@
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/Usuario" />
 
     <Button
         android:id="@+id/login"
@@ -49,14 +55,15 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="236dp"
         android:enabled="false"
-        android:text="@string/action_sign_in"
+        android:text="Iniciar sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.2"
+        />
 
     <ProgressBar
         android:id="@+id/loading"

@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
     tools:context=".MenuPrincipal">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refresqueria Vico"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="9dp" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/Venta"
+        android:layout_width="197dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="16dp"
+        android:text="Venta"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <Button
+        android:id="@+id/Inventario"
+        android:layout_width="214dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="48dp"
+        android:text="Inventario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Venta" />
+
+    <Button
+        android:id="@+id/Empleados"
+        android:layout_width="178dp"
+        android:layout_height="101dp"
+        android:text="Empleados"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/Productos"
+        android:layout_width="208dp"
+        android:layout_height="107dp"
+        android:text="Productos"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="440dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/Cortedecajas"
+        android:layout_width="213dp"
+        android:layout_height="107dp"
+        android:text="Corte de cajas"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="375dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <Button
+        android:id="@+id/Cerrarsesion"
+        android:layout_width="220dp"
+        android:layout_height="35dp"
+        android:text="Cerrar sesion"
+        tools:layout_editor_absoluteX="487dp"
+        tools:layout_editor_absoluteY="13dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
