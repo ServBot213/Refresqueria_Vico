@@ -1,41 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
+    android:padding="16dp"
     tools:context=".ApartadoEmpleados">
 
+    <!-- Guía para el GridLayout -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Título -->
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refresqueria Vico"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:text="Refresquería Vico"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
-    <Button
-        android:id="@+id/Vender"
-        android:layout_width="213dp"
-        android:layout_height="143dp"
-        android:text="Vender"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="140dp" />
+    <!-- Contenedor de botones -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/menuGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:alignmentMode="alignMargins"
+        app:columnCount="2"
+        app:rowCount="3"
+        app:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/textView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Cerrarsesion">
 
-    <Button
-        android:id="@+id/ConsultaProduct"
-        android:layout_width="205dp"
-        android:layout_height="132dp"
-        android:text="Consulta Productos"
-        tools:layout_editor_absoluteX="356dp"
-        tools:layout_editor_absoluteY="145dp" />
+        <!-- Botones del menú -->
+        <Button
+            android:id="@+id/Vender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Vender"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:padding="16dp"
+            app:layout_columnWeight="1" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="155dp"
-        android:layout_height="45dp"
-        android:text="Volver"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="7dp" />
+        <Button
+            android:id="@+id/ConsultaProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Consulta Productos"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:padding="16dp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:backgroundTint="#7e7e7e"
+            android:textColor="#FFFFFF"
+            android:padding="16dp"
+            app:layout_columnWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
