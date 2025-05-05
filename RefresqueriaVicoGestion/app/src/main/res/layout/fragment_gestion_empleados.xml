@@ -10,24 +10,24 @@
 
     <Button
         android:id="@+id/Consultaempleados"
-        android:layout_width="188dp"
-        android:layout_height="139dp"
+        android:layout_width="212dp"
+        android:layout_height="64dp"
         android:text="Consulta Empleados"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="127dp" />
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="270dp" />
 
     <Button
         android:id="@+id/RegistrarEmpleado"
-        android:layout_width="192dp"
-        android:layout_height="139dp"
+        android:layout_width="216dp"
+        android:layout_height="60dp"
         android:text="Registrar Empleado"
-        tools:layout_editor_absoluteX="362dp"
-        tools:layout_editor_absoluteY="127dp" />
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="381dp" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="130dp"
+        android:layout_height="47dp"
         android:text="Volver"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="4dp" />
@@ -37,8 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Refresqueria Vico"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="4dp" />
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

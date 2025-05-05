@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Refresqueria Vico"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="5dp" />
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="-2dp" />
 
     <Button
         android:id="@+id/button10"
@@ -25,10 +25,10 @@
 
     <TableLayout
         android:id="@+id/TablaMateriaP"
-        android:layout_width="532dp"
-        android:layout_height="325dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="70dp">
+        android:layout_width="366dp"
+        android:layout_height="255dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="69dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -52,46 +52,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Actualizar"
-        tools:layout_editor_absoluteX="537dp"
-        tools:layout_editor_absoluteY="61dp" />
+        tools:layout_editor_absoluteX="257dp"
+        tools:layout_editor_absoluteY="617dp" />
 
     <Button
         android:id="@+id/OrdenarNombreM"
         android:layout_width="163dp"
         android:layout_height="52dp"
         android:text="Nombre"
-        tools:layout_editor_absoluteX="537dp"
-        tools:layout_editor_absoluteY="165dp" />
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="383dp" />
 
     <Button
         android:id="@+id/OrdenarPrecioM"
         android:layout_width="158dp"
         android:layout_height="48dp"
         android:text="Precio"
-        tools:layout_editor_absoluteX="541dp"
-        tools:layout_editor_absoluteY="230dp" />
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="387dp" />
 
     <Button
         android:id="@+id/OrdenarIDM"
         android:layout_width="156dp"
         android:layout_height="46dp"
         android:text="ID"
-        tools:layout_editor_absoluteX="541dp"
-        tools:layout_editor_absoluteY="288dp" />
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="457dp" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ordenar por:"
-        tools:layout_editor_absoluteX="560dp"
-        tools:layout_editor_absoluteY="124dp" />
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="342dp" />
 
     <Button
         android:id="@+id/EliminarMateria"
         android:layout_width="158dp"
         android:layout_height="51dp"
         android:text="Eliminar"
-        tools:layout_editor_absoluteX="543dp"
-        tools:layout_editor_absoluteY="345dp" />
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="617dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acciones"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="545dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
