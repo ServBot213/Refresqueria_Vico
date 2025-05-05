@@ -18,30 +18,38 @@ public class ApartadoAdmin extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_apartado_admin, container, false);
 
-        // Obtener los botones del layout
-        Button empleadosButton = view.findViewById(R.id.button);
-        Button productosButton = view.findViewById(R.id.button2);
-        Button materiaPrimaButton = view.findViewById(R.id.button3);
-        Button cerrarSesionButton = view.findViewById(R.id.button4);
+        // Botones del menú
+        Button empleadosButton = view.findViewById(R.id.button);               // Empleados
+        Button consultaProductosButton = view.findViewById(R.id.button2);      // Consulta Productos
+        Button registrarProductosButton = view.findViewById(R.id.button3);     // Registrar Productos
+        Button consultaMateriaPrimaButton = view.findViewById(R.id.button4);   // Consultar Materia Prima
+        Button registrarMateriaPrimaButton = view.findViewById(R.id.button5);  // Registrar Materia Prima
+        Button volverButton = view.findViewById(R.id.button6);                 // Volver
 
-        // Definir las acciones de cada botón
         empleadosButton.setOnClickListener(v ->
                 Navigation.findNavController(view).navigate(R.id.action_apartadoAdmin_to_gestionEmpleados)
         );
 
-        productosButton.setOnClickListener(v ->
+        consultaProductosButton.setOnClickListener(v ->
+                Navigation.findNavController(view).navigate(R.id.action_apartadoAdmin_to_consultaProductos)
+        );
+
+        registrarProductosButton.setOnClickListener(v ->
                 Navigation.findNavController(view).navigate(R.id.action_apartadoAdmin_to_inventarioProductos2)
         );
 
-        materiaPrimaButton.setOnClickListener(v ->
+        consultaMateriaPrimaButton.setOnClickListener(v ->
+                Navigation.findNavController(view).navigate(R.id.action_apartadoAdmin_to_consultaMateriaPrima)
+        );
+
+        registrarMateriaPrimaButton.setOnClickListener(v ->
                 Navigation.findNavController(view).navigate(R.id.action_apartadoAdmin_to_inventarioMatPrima)
         );
 
-        cerrarSesionButton.setOnClickListener(v ->
-                getActivity().onBackPressed()  // Regresar al fragmento anterior o salir de la aplicación
+        volverButton.setOnClickListener(v ->
+                requireActivity().onBackPressed()
         );
 
         return view;

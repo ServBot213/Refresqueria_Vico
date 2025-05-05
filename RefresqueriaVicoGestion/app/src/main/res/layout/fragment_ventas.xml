@@ -1,115 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".Ventas">
+    android:padding="16dp">
 
+    <!-- Título -->
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refresqueria Vico"
-        android:textSize="48sp"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:text="Refresqueria vico"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#FFA500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/Cancelar"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnConfig"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/settings"
+        android:contentDescription="Configuración"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgUser"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Tabla de productos con Scroll -->
+    <ScrollView
+        android:id="@+id/scrollProductos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:fillViewport="true"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        app:layout_constraintBottom_toTopOf="@+id/btnGroupCategorias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/productTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"/>
+    </ScrollView>
+
+
+    <!-- Botones de categorías -->
+    <GridLayout
+        android:id="@+id/btnGroupCategorias"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cancelar"
-        tools:layout_editor_absoluteX="625dp"
-        tools:layout_editor_absoluteY="301dp" />
+        android:columnCount="4"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnGroupAcciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/Subtotal"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnBebidas"
+            android:text="Bebidas"
+            style="@style/CategoriaBoton" />
+
+        <Button
+            android:id="@+id/btnHelados"
+            android:text="Helados"
+            style="@style/CategoriaBoton" />
+
+        <Button
+            android:id="@+id/btnSabritas"
+            android:text="Sabritas"
+            style="@style/CategoriaBoton" />
+
+        <Button
+            android:id="@+id/btnComida"
+            android:text="Preparados"
+            style="@style/CategoriaBoton" />
+    </GridLayout>
+
+    <!-- Botones de acción -->
+    <GridLayout
+        android:id="@+id/btnGroupAcciones"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sub-Total"
-        tools:layout_editor_absoluteX="508dp"
-        tools:layout_editor_absoluteY="301dp" />
+        android:columnCount="4"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@+id/totalBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/Duplicar"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnVenta"
+            android:text="Venta"
+            style="@style/AccionBoton" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:text="Cancelar"
+            style="@style/AccionBoton" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:text="Eliminar"
+            style="@style/AccionBoton" />
+
+        <Button
+            android:id="@+id/btnDuplicar"
+            android:text="Duplicar"
+            style="@style/AccionBoton" />
+    </GridLayout>
+
+    <!-- Total -->
+    <LinearLayout
+        android:id="@+id/totalBar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Duplicar"
-        tools:layout_editor_absoluteX="628dp"
-        tools:layout_editor_absoluteY="351dp" />
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_button"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/Eliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eliminar"
-        tools:layout_editor_absoluteX="508dp"
-        tools:layout_editor_absoluteY="351dp" />
+        <TextView
+            android:text="Total"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/Bebidas"
-        android:layout_width="111dp"
-        android:layout_height="108dp"
-        android:text="Bebidas"
-        tools:layout_editor_absoluteX="501dp"
-        tools:layout_editor_absoluteY="36dp" />
-
-    <Button
-        android:id="@+id/Sabritas"
-        android:layout_width="111dp"
-        android:layout_height="108dp"
-        android:text="Sabritas"
-        tools:layout_editor_absoluteX="501dp"
-        tools:layout_editor_absoluteY="144dp" />
-
-    <Button
-        android:id="@+id/Comidapreparada"
-        android:layout_width="111dp"
-        android:layout_height="108dp"
-        android:text="Comida Preparada"
-        tools:layout_editor_absoluteX="618dp"
-        tools:layout_editor_absoluteY="144dp" />
-
-    <Button
-        android:id="@+id/Helados"
-        android:layout_width="111dp"
-        android:layout_height="108dp"
-        android:text="Helados"
-        tools:layout_editor_absoluteX="625dp"
-        tools:layout_editor_absoluteY="36dp" />
-
-    <TableRow
-        android:id="@+id/Tablaventas"
-        android:layout_width="494dp"
-        android:layout_height="269dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="64dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total:"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="345dp" />
-
-    <EditText
-        android:id="@+id/Totaldinero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:text="0"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="340dp" />
-
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="108dp"
-        android:layout_height="36dp"
-        android:text="Volver"
-        tools:layout_editor_absoluteY="5dp" />
+        <TextView
+            android:id="@+id/tvTotal"
+            android:text="$0"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

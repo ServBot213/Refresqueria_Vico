@@ -42,7 +42,8 @@
         app:layout_constraintTop_toBottomOf="@id/textView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/Cerrarsesion">
+        app:layout_constraintBottom_toTopOf="@id/button6"
+        tools:ignore="NotSibling">
 
         <!-- Botones del menú -->
         <Button
@@ -59,7 +60,7 @@
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Productos"
+            android:text="Consulta Productos"
             android:backgroundTint="#FFFFFF"
             android:textColor="#000000"
             android:padding="16dp"
@@ -69,14 +70,35 @@
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Materia Prima"
+            android:text="Registrar Productos"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:padding="16dp"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Consultar Materia Prima"
             android:backgroundTint="#FFFFFF"
             android:textColor="#000000"
             android:padding="16dp"
             app:layout_columnWeight="1" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Registrar Materia Prima"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            android:padding="16dp"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/button6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Volver"
