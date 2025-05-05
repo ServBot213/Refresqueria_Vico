@@ -1,4 +1,4 @@
-package com.example.refresqueriavicogestion.ui.login;
+package com.example.refresqueriavicogestion.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
