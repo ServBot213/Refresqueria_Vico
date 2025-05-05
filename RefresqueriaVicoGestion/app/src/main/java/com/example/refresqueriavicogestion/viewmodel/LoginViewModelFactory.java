@@ -1,4 +1,4 @@
-package com.example.refresqueriavicogestion.ui.login;
+package com.example.refresqueriavicogestion.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 
 import com.example.refresqueriavicogestion.data.LoginDataSource;
 import com.example.refresqueriavicogestion.data.LoginRepository;
+import com.example.refresqueriavicogestion.viewmodel.LoginViewModel;
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.
